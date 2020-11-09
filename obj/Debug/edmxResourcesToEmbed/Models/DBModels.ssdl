@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBEcoleModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Etudiants">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Prenom" Type="nvarchar" MaxLength="35" Nullable="false" />
+    <Property Name="Nom" Type="nvarchar" MaxLength="35" Nullable="false" />
+    <Property Name="DateNaissance" Type="datetime" Nullable="false" />
+    <Property Name="LieuNaissance" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Telephone" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="Adresse" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Cni" Type="nvarchar" MaxLength="18" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DBEcoleModelStoreContainer">
+    <EntitySet Name="Etudiants" EntityType="Self.Etudiants" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
